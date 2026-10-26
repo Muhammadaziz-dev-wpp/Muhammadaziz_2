@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CREATE OUR FUTURE</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+ <div class="container">
+  <a class="navbar-brand d-flex align-items-center" href="#home">
+   <div class="brand-logo"><span>&lt;</span><span>/</span><span>&gt;</span></div>
+   <div class="brand-text"><strong>CREATE</strong><span>OUR FUTURE</span></div>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="mainNavbar">
+   <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+    <li class="nav-item"><a class="nav-link" href="#home">Bosh sahifa</a></li>
+    <li class="nav-item"><a class="nav-link" href="#services">Xizmatlar</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">Biz haqimizda</a></li>
+    <li class="nav-item"><a class="nav-link" href="#buyurtmaModal" data-bs-toggle="modal">Buyurtma</a></li>
+    <li class="nav-item ms-lg-2"><button class="btn btn-main" onclick="scrollToContact()">Bog‘lanish</button></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+
+<div class="modal fade" id="buyurtmaModal" tabindex="-1" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-lg order-modal-dialog">
+  <div class="modal-content order-modal">
+   <div class="modal-header order-modal-header border-0">
+    <div><div class="order-badge">CREATE OUR FUTURE</div><h2>Loyihangizni boshlang</h2><p>Ma’lumotlaringizni qoldiring, biz tez orada bog‘lanamiz.</p></div>
+   </div>
+   <form id="orderForm">
+    <div class="modal-body order-modal-body">
+     <div class="row g-3">
+      <div class="col-md-6"><label class="order-label"><i class="bi bi-person"></i> Ismingiz *</label><div class="order-input"><i class="bi bi-person"></i><input name="name" id="name" placeholder="Masalan: Muhammad Aziz" required></div></div>
+      <div class="col-md-6"><label class="order-label"><i class="bi bi-telephone"></i> Telefon raqamingiz *</label><div class="order-input"><i class="bi bi-telephone"></i><input name="phone" id="phone" type="tel" maxlength="17" inputmode="numeric" placeholder="+998 90 123 45 67" required></div></div>
+      <div class="col-12 order-block"><label class="order-label"><i class="bi bi-grid"></i> Xizmat turini tanlang *</label><div class="row g-2" id="serviceList"></div></div>
+      <div class="col-12 order-block"><label class="order-label"><i class="bi bi-chat-left-text"></i> Loyiha haqida qisqacha</label><textarea name="message" id="message" rows="4" placeholder="Masalan: Internet do‘kon uchun zamonaviy web-sayt kerak..."></textarea></div>
+     </div>
+     <div class="order-security"><div class="security-icon"><i class="bi bi-shield-check"></i></div><div><strong>Ma’lumotlaringiz himoyalangan</strong><span>Ma’lumotlar faqat buyurtmangiz bilan bog‘lanish uchun ishlatiladi.</span></div></div>
+    </div>
+    <div class="modal-footer order-footer border-0">
+     <button type="button" class="order-cancel" data-bs-dismiss="modal">Bekor qilish</button>
+     <button type="submit" class="order-send" id="sendBtn"><i class="bi bi-telegram me-2"></i>Buyurtma yuborish</button>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+
+<section id="home" class="hero-section"><div class="hero-grid"></div><div class="container position-relative"><div class="row align-items-center min-vh-100"><div class="col-lg-7">
+<div class="hero-badge"><span class="pulse-dot"></span>IT SOLUTIONS & SERVICES</div>
+<h1 class="hero-title">Bizneslarni <span class="highlight">raqamli texnologiyalarga</span> aylantiramiz.</h1>
+<p class="hero-text">Biznesingiz uchun zamonaviy web-saytlar, mobil ilovalar, AI agentlar va murakkab dasturiy tizimlarni yaratamiz.</p>
+<div class="hero-buttons"><button class="btn btn-main btn-lg" data-bs-toggle="modal" data-bs-target="#buyurtmaModal">Loyihani boshlash <i class="bi bi-arrow-right ms-2"></i></button><a href="#services" class="btn btn-outline-light btn-lg">Xizmatlarimiz</a></div>
+<div class="hero-statistics"><div><strong>5+</strong><span>Xizmat turi</span></div><div><strong>24/7</strong><span>Aloqa</span></div><div><strong>100%</strong><span>Individual</span></div></div>
+</div><div class="col-lg-5 mt-5 mt-lg-0"><div class="tech-card"><div class="tech-card-top"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div><div class="code-area"><div class="code-line"><span class="purple">const</span> <span class="blue">future</span> = {</div><div class="code-line indent"><span class="green">idea</span>: <span class="yellow">"YOUR IDEA"</span>,</div><div class="code-line indent"><span class="green">technology</span>: <span class="yellow">"MODERN"</span>,</div><div class="code-line indent"><span class="green">result</span>: <span class="yellow">"SUCCESS"</span></div><div class="code-line">};</div></div><div class="tech-icons"><div><i class="bi bi-code-slash"></i><span>WEB</span></div><div><i class="bi bi-phone"></i><span>APP</span></div><div><i class="bi bi-robot"></i><span>AI</span></div></div></div></div></div></div></div></section>
+
+<section id="services" class="services-section"><div class="container"><div class="section-heading text-center"><div class="section-label">NIMA QILAMIZ?</div><h2>Biznesingiz uchun <span>texnologik yechimlar</span></h2><p>G‘oyangizni zamonaviy texnologiyalar yordamida real mahsulotga aylantiramiz.</p></div><div class="row g-4">
+<div class="col-12 col-sm-6 col-lg-4"><div class="service-card"><div class="service-number">01</div><div class="service-icon"><i class="bi bi-globe2"></i></div><h3>Biznes uchun web-saytlar</h3><p>Biznesingiz uchun zamonaviy, tezkor va barcha qurilmalarga mos web-saytlar yaratamiz.</p><div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div></div></div>
+<div class="col-12 col-sm-6 col-lg-4"><div class="service-card"><div class="service-number">02</div><div class="service-icon"><i class="bi bi-phone"></i></div><h3>Mobil ilovalar</h3><p>Android va iOS uchun qulay, zamonaviy va foydalanuvchiga mos mobil ilovalar.</p><div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div></div></div>
+<div class="col-12 col-sm-6 col-lg-4"><div class="service-card"><div class="service-number">03</div><div class="service-icon"><i class="bi bi-robot"></i></div><h3>Sun’iy intellekt (AI) agentlari</h3><p>Biznes jarayonlarini avtomatlashtirish uchun zamonaviy AI yechimlarini yaratamiz.</p><div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div></div></div>
+<div class="col-12 col-sm-6 col-lg-4"><div class="service-card"><div class="service-number">04</div><div class="service-icon"><i class="bi bi-cpu"></i></div><h3>Murakkab dasturiy tizimlar</h3><p>Katta loyihalar uchun kuchli, xavfsiz va kengaytiriladigan dasturiy tizimlar.</p><div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div></div></div>
+<div class="col-12 col-sm-6 col-lg-4"><div class="service-card"><div class="service-number">05</div><div class="service-icon"><i class="bi bi-lightning-charge"></i></div><h3>Eng tezkor xizmat</h3><p>Loyihangizni imkon qadar tez va sifatli bajarishga harakat qilamiz.</p><div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div></div></div>
+</div></div></section>
+
+<section id="about" class="about-section"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-6"><div class="about-visual"><div class="circle circle-one"></div><div class="circle circle-two"></div><div class="about-logo"><div class="big-logo">&lt;/&gt;</div><strong>CREATE OUR FUTURE</strong><small>IT SOLUTIONS & SERVICES</small></div></div></div><div class="col-lg-6"><div class="section-label">BIZ HAQIMIZDA</div><h2 class="about-title">Texnologiya bilan <span>kelajakni yaratamiz.</span></h2><p class="about-text">Har bir biznesning o‘ziga xos g‘oyasi bor. Biz esa shu g‘oyani texnologiya yordamida ishlaydigan va foyda keltiradigan mahsulotga aylantirishga yordam beramiz.</p><div class="about-list"><div><i class="bi bi-check-circle-fill"></i>Individual yondashuv</div><div><i class="bi bi-check-circle-fill"></i>Zamonaviy texnologiyalar</div><div><i class="bi bi-check-circle-fill"></i>Responsive dizayn</div><div><i class="bi bi-check-circle-fill"></i>Tezkor xizmat</div></div><button class="btn btn-main mt-4" onclick="scrollToContact()">Biz bilan ishlash <i class="bi bi-arrow-right ms-2"></i></button></div></div></div></section>
+
+<section class="process-section"><div class="container"><div class="section-heading text-center"><div class="section-label">QANDAY ISHLAYMIZ?</div><h2>G‘oyadan <span>tayyor mahsulotgacha</span></h2></div><div class="row g-4"><div class="col-md-4"><div class="process-card"><div class="process-icon">01</div><h3>G‘oya</h3><p>Siz o‘z g‘oyangizni aytasiz, biz esa uni tahlil qilamiz.</p></div></div><div class="col-md-4"><div class="process-card"><div class="process-icon">02</div><h3>Yaratish</h3><p>Dizayn, dasturlash va barcha texnik jarayonlarni amalga oshiramiz.</p></div></div><div class="col-md-4"><div class="process-card"><div class="process-icon">03</div><h3>Natija</h3><p>Tayyor mahsulotni ishga tushiramiz va sizga topshiramiz.</p></div></div></div></div></section>
+
+<section class="stats-section"><div class="container"><div class="row text-center g-4"><div class="col-6 col-lg-3"><h2>50+</h2><p>Loyihalar</p></div><div class="col-6 col-lg-3"><h2>30+</h2><p>Mijozlar</p></div><div class="col-6 col-lg-3"><h2>5+</h2><p>Xizmatlar</p></div><div class="col-6 col-lg-3"><h2>24/7</h2><p>Aloqa</p></div></div></div></section>
+
+<section class="technology-section"><div class="container text-center"><div class="section-label">TEXNOLOGIYALAR</div><h2>Zamonaviy <span>texnologiyalar</span></h2><div class="tech-list"><div>React</div><div>JavaScript</div><div>Node.js</div><div>Supabase</div><div>AI</div><div>Bootstrap</div></div></div></section>
+
+<section class="why-section"><div class="container"><div class="section-heading text-center"><div class="section-label">NEGA BIZ?</div><h2>Biz bilan ishlash <span>oson.</span></h2></div><div class="row g-4"><div class="col-md-4"><div class="why-card"><i class="bi bi-lightning-charge"></i><h3>Tezkor</h3><p>Loyihalarni tez va sifatli yaratamiz.</p></div></div><div class="col-md-4"><div class="why-card"><i class="bi bi-shield-check"></i><h3>Ishonchli</h3><p>Xavfsiz va zamonaviy yechimlar.</p></div></div><div class="col-md-4"><div class="why-card"><i class="bi bi-stars"></i><h3>Zamonaviy</h3><p>Eng yangi texnologiyalardan foydalanamiz.</p></div></div></div></div></section>
+
+<section id="team" class="team-section"><div class="container"><div class="section-heading text-center"><div class="section-label">JAMOA A'ZOLARI</div><h2>Bizning kuchli <span>jamoamiz</span></h2><p>Tajribali dasturchilar bilan g‘oyalaringizni amalga oshiramiz.</p></div><div class="row g-4 justify-content-center">
+<div class="col-12 col-md-6 col-lg-4"><div class="team-card"><div class="team-image"><div class="team-placeholder">BM</div></div><div class="team-info"><h3>Baxodir Mo'minov</h3><h2 class="Ceo">CEO</h2><p>Full Stack dasturchi</p><small>5 yil tajriba</small></div></div></div>
+<div class="col-12 col-md-6 col-lg-4"><div class="team-card"><div class="team-image"><div class="team-placeholder">AY</div></div><div class="team-info"><h3>Abdulloh Yo'ldoshev</h3><p>Backend dasturchi</p><small>1,2 yil tajriba</small></div></div></div>
+<div class="col-12 col-md-6 col-lg-4"><div class="team-card"><div class="team-image"><div class="team-placeholder">FK</div></div><div class="team-info"><h3>Fazliddin Khojakbarov</h3><p>AI dasturchi</p><small>1,4 yil tajriba</small></div></div></div>
+<div class="col-12 col-md-6 col-lg-4"><div class="team-card"><div class="team-image"><div class="team-placeholder">MA</div></div><div class="team-info"><h3>Madaminov Muhammad Aziz</h3><p>Frontend dasturchi</p><small>1,6 yil tajriba</small></div></div></div>
+<div class="col-12 col-md-6 col-lg-4"><div class="team-card"><div class="team-image"><div class="team-placeholder">SI</div></div><div class="team-info"><h3>Saidakbarov Ibrohim</h3><p>Frontend dasturchi</p><small>1,5 yil tajriba</small></div></div></div>
+</div></div></section>
+
+<section id="contact" class="contact-section"><div class="container"><div class="contact-box"><div class="row align-items-center g-4"><div class="col-lg-7"><div class="section-label">BIZ BILAN BOG‘LANING</div><h2>Sizning g‘oyangiz. <span>Bizning yechimimiz.</span></h2><p>Loyihangiz haqida gaplashamiz. Birgalikda eng yaxshi yechimni topamiz.</p></div><div class="col-lg-5"><div class="contact-person"><div class="person-icon"><i class="bi bi-person-fill"></i></div><div><small>MANAGER</small><h3>BAHODIRXO‘JA</h3></div></div><div class="phone-list"><a href="tel:+998946621665"><i class="bi bi-telephone-fill"></i>+998 94 662 16 65</a><a href="tel:+998200121206"><i class="bi bi-telephone-fill"></i>+998 20 012 12 06</a></div><a href="https://wa.me/998946621665" target="_blank" rel="noreferrer" class="btn btn-whatsapp w-100"><i class="bi bi-whatsapp me-2"></i>WhatsApp orqali yozish</a></div></div></div></div></div></section>
+
+<footer class="footer"><div class="container"><div class="row g-4"><div class="col-md-6"><div class="footer-brand"><div class="footer-logo">&lt;/&gt;</div><div><strong>CREATE OUR FUTURE</strong><small>IT SOLUTIONS & SERVICES</small></div></div><p class="footer-description">Zamonaviy IT yechimlar orqali biznesingiz uchun kelajakni yaratamiz.</p></div><div class="col-6 col-md-3"><h5>Xizmatlar</h5><a href="#services">Web-saytlar</a><a href="#services">Mobil ilovalar</a><a href="#services">AI agentlar</a><a href="#services">Dasturiy tizimlar</a></div><div class="col-6 col-md-3"><h5>Aloqa</h5><a href="tel:+998946621665">+998 94 662 16 65</a><a href="tel:+998200121206">+998 20 012 12 06</a><a href="#contact">Bog‘lanish</a></div></div><div class="footer-bottom"><span>© 2026 CREATE OUR FUTURE</span><span>SIZNING G‘OYANGIZ. BIZNING YECHIMIMIZ.</span></div></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
